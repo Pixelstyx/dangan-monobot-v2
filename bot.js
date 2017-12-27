@@ -6,14 +6,6 @@ sql.open("./stats.sqlite");
 client.on('ready', () => {
 });
 
-});
-
-//This is for each player's FTE data
-//sql.run("CREATE TABLE IF NOT EXISTS fteData (userID TEXT, playersApproached INTEGER, approachedBy INTEGER, shards1 INTEGER, shards2 INTEGER, shards3 INTEGER, shards4 INTEGER, shards5 INTEGER, shards6 INTEGER, shards7 INTEGER, shards8 INTEGER, shards9 INTEGER, shards10 INTEGER, shards11 INTEGER, shards12 INTEGER, shards13 INTEGER, shards14 INTEGER, shards15 INTEGER, shard16 INTEGER)");
-
-//This is for the present names, descriptions, and like values
-//sql.run("CREATE TABLE IF NOT EXISTS presentdata (number INTEGER, name TEXT, desc TEXT, like1 DOUBLE, like2 DOUBLE, like3 DOUBLE, like4 DOUBLE, like5 DOUBLE, like6 DOUBLE, like7 DOUBLE, like8 DOUBLE, like9 DOUBLE, like10 DOUBLE, like11 DOUBLE, like12 DOUBLE, like13 DOUBLE, like14 DOUBLE, like15 DOUBLE, like16 DOUBLE)"); 
-
 client.on('message', msg => {
     // Our bot needs to know if it will execute a command
     // It will listen for messages that will start with `!`
