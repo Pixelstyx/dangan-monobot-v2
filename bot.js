@@ -1,5 +1,7 @@
 var Discord = require('discord.js');
 const client = new Discord.Client();
+const cfg = require('./auth.json');
+bot.login(cfg.TOKEN);
 const sql = require("sqlite");
 sql.open("./stats.sqlite");
 
@@ -365,7 +367,7 @@ client.on('message', msg => {
 	}
 });
 
-client.login(process.env.TOKEN);
+client.login(cfg.TOKEN);
 
 const port = process.env.PORT || 5000;
 
