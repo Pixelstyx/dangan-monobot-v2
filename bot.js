@@ -90,7 +90,7 @@ client.on('message', msg => {
            	break;
 
 
-			//DAILY LIFE COMMANDS
+		//DAILY LIFE COMMANDS
 
 		// !giveItem: gives a Present to someone, if they choose to accept it.
             	case 'giveItem':
@@ -361,7 +361,8 @@ client.on('message', msg => {
             	case 'punishment':
 			bot.sendMessage(message.author, "PLACEHOLDER");
             	break;
-         }
+		}
+	}
 });
 
 client.login(process.env.TOKEN);
