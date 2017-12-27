@@ -75,3 +75,6 @@ jspm_packages
 
 # Heroku Env
 .env
+
+# The Discord Voices Told Me To Do It
+auth.json
