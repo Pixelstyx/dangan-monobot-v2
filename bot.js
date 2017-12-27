@@ -438,7 +438,7 @@ client.on('message', msg => {
      }
 });
 
-client.login("MzkxMjQ1MDU0ODQ2NTY2NDAw.DR3r1Q.5GZVxTGXC6iC4R6ozZlNr_G9-a4");
+client.login(process.env.TOKEN);
 
 const port = process.env.PORT || 5000;
 
