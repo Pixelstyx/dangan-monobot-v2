@@ -4337,6 +4337,6 @@ client.on('message', (message) => {
      }
 });
 
-client.login("MzkxMjQ1MDU0ODQ2NTY2NDAw.DSXqOw.RsTojaMs7z4ue_QHd1fgrMWIhzM");
+client.login("delet this");
 
 const port = process.env.PORT || 5000;
