@@ -1,3 +1,26 @@
+client.on('message', async message => {
+    // Our bot needs to know if it will execute a command
+    // It will listen for messages that will start with `!`
+
+    if (message.channel.type !== "dm") return; // All commands must be DM, or they won't work. This is to hide commands from other players.
+	if (message.author.id == "391245054846566400") return;
+
+    if (message.content.startsWith ("!")) 
+    {
+        var args = message.content;
+       
+
+        args = args.slice(1); // removes the '!'
+		var subargs = args.split("-");
+
+		if(subargs.length > 0)
+		{
+			var target = subargs[1];
+		}
+
+        switch(subargs[0]) 
+		{
+
 // !getInventory: gets a list of the player's Presents
 			// subargs[1] is which page the student wishes to look at
             case 'getInventory':
@@ -536,3 +559,4 @@
 								message.reply(pstring1 + '\n' + pstring2 + '\n' + pstring3 + '\n' + pstring4 + '\n' + pstring5 + '\n' + pstring6 + '\n' + pstring7 + '\n' + pstring8 + '\n' + pstring9 + '\n' + pstring10 + '\n' + pstring11 + '\n' + pstring12 + '\n' + pstring13 + '\n' + pstring14 + '\n' + pstring15 + '\n' + pstring16 + '\n' + pstring17 + '\n' + pstring18 + '\n' + pstring19 + '\n' + pstring20);
 								
 							break;
+						}
