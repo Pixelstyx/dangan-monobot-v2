@@ -1,4 +1,6 @@
-case 'getInventory':
+// !getInventory: gets a list of the player's Presents
+			// subargs[1] is which page the student wishes to look at
+            case 'getInventory':
 				sql.get("SELECT * FROM presents WHERE userId = " + message.author.id).then(row => 
 				{
 					if (!row)
@@ -31,42 +33,42 @@ case 'getInventory':
 								var amount19 = row.p19;
 								var amount20 = row.p20;
 
-								pstring1 = "";
-								pstring2 = "";
-								pstring3 = "";
-								pstring4 = "";
-								pstring5 = "";
-								pstring6 = "";
-								pstring7 = "";
-								pstring8 = "";
-								pstring9 = "";
-								pstring10 = "";
-								pstring11 = "";
-								pstring12 = "";
-								pstring13 = "";
-								pstring14 = "";
-								pstring15 = "";
-								pstring16 = "";
-								pstring17 = "";
-								pstring18 = "";
-								pstring19 = "";
-								pstring20 = "";
+								var pstring1;
+								var pstring2;
+								var pstring3;
+								var pstring4;
+								var pstring5;
+								var pstring6;
+								var pstring7;
+								var pstring8;
+								var pstring9;
+								var pstring10;
+								var pstring11;
+								var pstring12;
+								var pstring13;
+								var pstring14;
+								var pstring15;
+								var pstring16;
+								var pstring17;
+								var pstring18;
+								var pstring19;
+								var pstring20;
 
 								sql.get('SELECT * FROM presentdata WHERE number = 001').then(row => 
 								{
 									if (!row)
 									{
-										message.reply('ERROR: Present #001 has not been initialized!');
+										let pstring1 = ('ERROR: Present #001 has not been initialized!');
 									}
 									else
 									{
-										if (row.found == true)
+										if (row.found)
 										{
-											pstring1 = ('#00' + row.number + ': ' + row.name + ' (x' + amount1 + ')');
+											let pstring1 = ('#00' + row.number + ': ' + row.name + ' (x' + amount1 + ')');
 										}
 										else
 										{
-											pstring1 = ('#00' + row.number + ': ??? (x0)');
+											let pstring1 = ('#00' + row.number + ': ??? (x0)');
 										}
 									}
 								}).catch(err => 
@@ -74,7 +76,7 @@ case 'getInventory':
 									console.error(err);
 									sql.run("CREATE TABLE IF NOT EXISTS presentdata (number INTEGER, name TEXT, desc TEXT, found BOOLEAN, like1 DOUBLE, like2 DOUBLE, like3 DOUBLE, like4 DOUBLE, like5 DOUBLE, like6 DOUBLE, like7 DOUBLE, like8 DOUBLE, like9 DOUBLE, like10 DOUBLE, like11 DOUBLE, like12 DOUBLE, like13 DOUBLE, like14 DOUBLE, like15 DOUBLE, like16 DOUBLE)").then(() => 
 									{
-										pstring1 =  ('ERROR: Present #001 has not been initialized!');
+										let pstring1 =  ('ERROR: Present #001 has not been initialized!');
 										message.reply ('Table presentdata created.');
 									});
 								});
@@ -83,17 +85,17 @@ case 'getInventory':
 								{
 									if (!row)
 									{
-										message.reply('ERROR: Present #002 has not been initialized!');
+										let pstring2 = ('ERROR: Present #002 has not been initialized!');
 									}
 									else
 									{
-										if (row.found == true)
+										if (row.found)
 										{
-											pstring2 = ('#00' + row.number + ': ' + row.name + ' (x' + amount2 + ')');
+											let pstring2 = ('#00' + row.number + ': ' + row.name + ' (x' + amount2 + ')');
 										}
 										else
 										{
-											pstring2 = ('#00' + row.number + ': ??? (x0)');
+											let pstring2 = ('#00' + row.number + ': ??? (x0)');
 										}
 									}
 								}).catch(err => 
@@ -101,7 +103,7 @@ case 'getInventory':
 									console.error(err);
 									sql.run("CREATE TABLE IF NOT EXISTS presentdata (number INTEGER, name TEXT, desc TEXT, found BOOLEAN, like1 DOUBLE, like2 DOUBLE, like3 DOUBLE, like4 DOUBLE, like5 DOUBLE, like6 DOUBLE, like7 DOUBLE, like8 DOUBLE, like9 DOUBLE, like10 DOUBLE, like11 DOUBLE, like12 DOUBLE, like13 DOUBLE, like14 DOUBLE, like15 DOUBLE, like16 DOUBLE)").then(() => 
 									{
-										pstring2 =  ('ERROR: Present #002 has not been initialized!');
+										let pstring2 =  ('ERROR: Present #002 has not been initialized!');
 										message.reply ('Table presentdata created.');
 									});
 								});
@@ -110,17 +112,17 @@ case 'getInventory':
 								{
 									if (!row)
 									{
-										message.reply('ERROR: Present #003 has not been initialized!');
+										let pstring3 = ('ERROR: Present #003 has not been initialized!');
 									}
 									else
 									{
-										if (row.found == true)
+										if (row.found)
 										{
-											pstring3 = ('#00' + row.number + ': ' + row.name + ' (x' + amount3 + ')');
+											let pstring3 = ('#00' + row.number + ': ' + row.name + ' (x' + amount3 + ')');
 										}
 										else
 										{
-											pstring3 = ('#00' + row.number + ': ??? (x0)');
+											let pstring3 = ('#00' + row.number + ': ??? (x0)');
 										}
 									}
 								}).catch(err => 
@@ -128,7 +130,7 @@ case 'getInventory':
 									console.error(err);
 									sql.run("CREATE TABLE IF NOT EXISTS presentdata (number INTEGER, name TEXT, desc TEXT, found BOOLEAN, like1 DOUBLE, like2 DOUBLE, like3 DOUBLE, like4 DOUBLE, like5 DOUBLE, like6 DOUBLE, like7 DOUBLE, like8 DOUBLE, like9 DOUBLE, like10 DOUBLE, like11 DOUBLE, like12 DOUBLE, like13 DOUBLE, like14 DOUBLE, like15 DOUBLE, like16 DOUBLE)").then(() => 
 									{
-										pstring3 =  ('ERROR: Present #003 has not been initialized!');
+										let pstring3 =  ('ERROR: Present #003 has not been initialized!');
 										message.reply ('Table presentdata created.');
 									});
 								});
@@ -137,17 +139,17 @@ case 'getInventory':
 								{
 									if (!row)
 									{
-										message.reply('ERROR: Present #004 has not been initialized!');
+										let pstring4 = ('ERROR: Present #004 has not been initialized!');
 									}
 									else
 									{
-										if (row.found == true)
+										if (row.found)
 										{
-											pstring4 = ('#00' + row.number + ': ' + row.name + ' (x' + amount4 + ')');
+											let pstring4 = ('#00' + row.number + ': ' + row.name + ' (x' + amount4 + ')');
 										}
 										else
 										{
-											pstring4 = ('#00' + row.number + ': ??? (x0)');
+											let pstring4 = ('#00' + row.number + ': ??? (x0)');
 										}
 									}
 								}).catch(err => 
@@ -155,7 +157,7 @@ case 'getInventory':
 									console.error(err);
 									sql.run("CREATE TABLE IF NOT EXISTS presentdata (number INTEGER, name TEXT, desc TEXT, found BOOLEAN, like1 DOUBLE, like2 DOUBLE, like3 DOUBLE, like4 DOUBLE, like5 DOUBLE, like6 DOUBLE, like7 DOUBLE, like8 DOUBLE, like9 DOUBLE, like10 DOUBLE, like11 DOUBLE, like12 DOUBLE, like13 DOUBLE, like14 DOUBLE, like15 DOUBLE, like16 DOUBLE)").then(() => 
 									{
-										pstring4 =  ('ERROR: Present #004 has not been initialized!');
+										let pstring4 =  ('ERROR: Present #004 has not been initialized!');
 										message.reply ('Table presentdata created.');
 									});
 								});
@@ -164,17 +166,17 @@ case 'getInventory':
 								{
 									if (!row)
 									{
-										message.reply('ERROR: Present #005 has not been initialized!');
+										let pstring5 = ('ERROR: Present #005 has not been initialized!');
 									}
 									else
 									{
-										if (row.found == true)
+										if (row.found)
 										{
-											pstring5 = ('#00' + row.number + ': ' + row.name + ' (x' + amount5 + ')');
+											let pstring5 = ('#00' + row.number + ': ' + row.name + ' (x' + amount5 + ')');
 										}
 										else
 										{
-											pstring5 = ('#00' + row.number + ': ??? (x0)');
+											let pstring5 = ('#00' + row.number + ': ??? (x0)');
 										}
 									}
 								}).catch(err => 
@@ -182,7 +184,7 @@ case 'getInventory':
 									console.error(err);
 									sql.run("CREATE TABLE IF NOT EXISTS presentdata (number INTEGER, name TEXT, desc TEXT, found BOOLEAN, like1 DOUBLE, like2 DOUBLE, like3 DOUBLE, like4 DOUBLE, like5 DOUBLE, like6 DOUBLE, like7 DOUBLE, like8 DOUBLE, like9 DOUBLE, like10 DOUBLE, like11 DOUBLE, like12 DOUBLE, like13 DOUBLE, like14 DOUBLE, like15 DOUBLE, like16 DOUBLE)").then(() => 
 									{
-										pstring5 =  ('ERROR: Present #005 has not been initialized!');
+										let pstring5 =  ('ERROR: Present #005 has not been initialized!');
 										message.reply ('Table presentdata created.');
 									});
 								});
@@ -191,17 +193,17 @@ case 'getInventory':
 								{
 									if (!row)
 									{
-										message.reply('ERROR: Present #006 has not been initialized!');
+										let pstring6 = ('ERROR: Present #006 has not been initialized!');
 									}
 									else
 									{
-										if (row.found == true)
+										if (row.found)
 										{
-											pstring6 = ('#00' + row.number + ': ' + row.name + ' (x' + amount6 + ')');
+											let pstring6 = ('#00' + row.number + ': ' + row.name + ' (x' + amount6 + ')');
 										}
 										else
 										{
-											pstring6 = ('#00' + row.number + ': ??? (x0)');
+											let pstring6 = ('#00' + row.number + ': ??? (x0)');
 										}
 									}
 								}).catch(err => 
@@ -209,7 +211,389 @@ case 'getInventory':
 									console.error(err);
 									sql.run("CREATE TABLE IF NOT EXISTS presentdata (number INTEGER, name TEXT, desc TEXT, found BOOLEAN, like1 DOUBLE, like2 DOUBLE, like3 DOUBLE, like4 DOUBLE, like5 DOUBLE, like6 DOUBLE, like7 DOUBLE, like8 DOUBLE, like9 DOUBLE, like10 DOUBLE, like11 DOUBLE, like12 DOUBLE, like13 DOUBLE, like14 DOUBLE, like15 DOUBLE, like16 DOUBLE)").then(() => 
 									{
-										pstring6 =  ('ERROR: Present #006 has not been initialized!');
+										let pstring6 =  ('ERROR: Present #006 has not been initialized!');
 										message.reply ('Table presentdata created.');
 									});
 								});
+
+								sql.get('SELECT * FROM presentdata WHERE number = 007').then(row => 
+								{
+									if (!row)
+									{
+										let pstring7 = ('ERROR: Present #007 has not been initialized!');
+									}
+									else
+									{
+										if (row.found)
+										{
+											let pstring7 = ('#00' + row.number + ': ' + row.name + ' (x' + amount7 + ')');
+										}
+										else
+										{
+											let pstring7 = ('#00' + row.number + ': ??? (x0)');
+										}
+									}
+								}).catch(err => 
+								{
+									console.error(err);
+									sql.run("CREATE TABLE IF NOT EXISTS presentdata (number INTEGER, name TEXT, desc TEXT, found BOOLEAN, like1 DOUBLE, like2 DOUBLE, like3 DOUBLE, like4 DOUBLE, like5 DOUBLE, like6 DOUBLE, like7 DOUBLE, like8 DOUBLE, like9 DOUBLE, like10 DOUBLE, like11 DOUBLE, like12 DOUBLE, like13 DOUBLE, like14 DOUBLE, like15 DOUBLE, like16 DOUBLE)").then(() => 
+									{
+										let pstring7 =  ('ERROR: Present #007 has not been initialized!');
+										message.reply ('Table presentdata created.');
+									});
+								});
+
+								sql.get('SELECT * FROM presentdata WHERE number = 008').then(row => 
+								{
+									if (!row)
+									{
+										let pstring8 = ('ERROR: Present #008 has not been initialized!');
+									}
+									else
+									{
+										if (row.found)
+										{
+											let pstring8 = ('#00' + row.number + ': ' + row.name + ' (x' + amount8 + ')');
+										}
+										else
+										{
+											let pstring8 = ('#00' + row.number + ': ??? (x0)');
+										}
+									}
+								}).catch(err => 
+								{
+									console.error(err);
+									sql.run("CREATE TABLE IF NOT EXISTS presentdata (number INTEGER, name TEXT, desc TEXT, found BOOLEAN, like1 DOUBLE, like2 DOUBLE, like3 DOUBLE, like4 DOUBLE, like5 DOUBLE, like6 DOUBLE, like7 DOUBLE, like8 DOUBLE, like9 DOUBLE, like10 DOUBLE, like11 DOUBLE, like12 DOUBLE, like13 DOUBLE, like14 DOUBLE, like15 DOUBLE, like16 DOUBLE)").then(() => 
+									{
+										let pstring8 =  ('ERROR: Present #008 has not been initialized!');
+										message.reply ('Table presentdata created.');
+									});
+								});
+
+								sql.get('SELECT * FROM presentdata WHERE number = 009').then(row => 
+								{
+									if (!row)
+									{
+										let pstring9 = ('ERROR: Present #009 has not been initialized!');
+									}
+									else
+									{
+										if (row.found)
+										{
+											let pstring9 = ('#00' + row.number + ': ' + row.name + ' (x' + amount9 + ')');
+										}
+										else
+										{
+											let pstring9 = ('#00' + row.number + ': ??? (x0)');
+										}
+									}
+								}).catch(err => 
+								{
+									console.error(err);
+									sql.run("CREATE TABLE IF NOT EXISTS presentdata (number INTEGER, name TEXT, desc TEXT, found BOOLEAN, like1 DOUBLE, like2 DOUBLE, like3 DOUBLE, like4 DOUBLE, like5 DOUBLE, like6 DOUBLE, like7 DOUBLE, like8 DOUBLE, like9 DOUBLE, like10 DOUBLE, like11 DOUBLE, like12 DOUBLE, like13 DOUBLE, like14 DOUBLE, like15 DOUBLE, like16 DOUBLE)").then(() => 
+									{
+										let pstring9 =  ('ERROR: Present #009 has not been initialized!');
+										message.reply ('Table presentdata created.');
+									});
+								});
+
+								sql.get('SELECT * FROM presentdata WHERE number = 010').then(row => 
+								{
+									if (!row)
+									{
+										let pstring10 = ('ERROR: Present #010 has not been initialized!');
+									}
+									else
+									{
+										if (row.found)
+										{
+											let pstring10 = ('#0' + row.number + ': ' + row.name + ' (x' + amount10 + ')');
+										}
+										else
+										{
+											let pstring10 = ('#0' + row.number + ': ??? (x0)');
+										}
+									}
+								}).catch(err => 
+								{
+									console.error(err);
+									sql.run("CREATE TABLE IF NOT EXISTS presentdata (number INTEGER, name TEXT, desc TEXT, found BOOLEAN, like1 DOUBLE, like2 DOUBLE, like3 DOUBLE, like4 DOUBLE, like5 DOUBLE, like6 DOUBLE, like7 DOUBLE, like8 DOUBLE, like9 DOUBLE, like10 DOUBLE, like11 DOUBLE, like12 DOUBLE, like13 DOUBLE, like14 DOUBLE, like15 DOUBLE, like16 DOUBLE)").then(() => 
+									{
+										let pstring10 =  ('ERROR: Present #010 has not been initialized!');
+										message.reply ('Table presentdata created.');
+									});
+								});
+
+								sql.get('SELECT * FROM presentdata WHERE number = 011').then(row => 
+								{
+									if (!row)
+									{
+										let pstring11 = ('ERROR: Present #011 has not been initialized!');
+									}
+									else
+									{
+										if (row.found)
+										{
+											let pstring11 = ('#0' + row.number + ': ' + row.name + ' (x' + amount11 + ')');
+										}
+										else
+										{
+											let pstring11 = ('#0' + row.number + ': ??? (x0)');
+										}
+									}
+								}).catch(err => 
+								{
+									console.error(err);
+									sql.run("CREATE TABLE IF NOT EXISTS presentdata (number INTEGER, name TEXT, desc TEXT, found BOOLEAN, like1 DOUBLE, like2 DOUBLE, like3 DOUBLE, like4 DOUBLE, like5 DOUBLE, like6 DOUBLE, like7 DOUBLE, like8 DOUBLE, like9 DOUBLE, like10 DOUBLE, like11 DOUBLE, like12 DOUBLE, like13 DOUBLE, like14 DOUBLE, like15 DOUBLE, like16 DOUBLE)").then(() => 
+									{
+										let pstring11 =  ('ERROR: Present #011 has not been initialized!');
+										message.reply ('Table presentdata created.');
+									});
+								});
+
+								sql.get('SELECT * FROM presentdata WHERE number = 012').then(row => 
+								{
+									if (!row)
+									{
+										let pstring12 = ('ERROR: Present #012 has not been initialized!');
+									}
+									else
+									{
+										if (row.found)
+										{
+											let pstring12 = ('#0' + row.number + ': ' + row.name + ' (x' + amount12 + ')');
+										}
+										else
+										{
+											let pstring12 = ('#0' + row.number + ': ??? (x0)');
+										}
+									}
+								}).catch(err => 
+								{
+									console.error(err);
+									sql.run("CREATE TABLE IF NOT EXISTS presentdata (number INTEGER, name TEXT, desc TEXT, found BOOLEAN, like1 DOUBLE, like2 DOUBLE, like3 DOUBLE, like4 DOUBLE, like5 DOUBLE, like6 DOUBLE, like7 DOUBLE, like8 DOUBLE, like9 DOUBLE, like10 DOUBLE, like11 DOUBLE, like12 DOUBLE, like13 DOUBLE, like14 DOUBLE, like15 DOUBLE, like16 DOUBLE)").then(() => 
+									{
+										let pstring12 =  ('ERROR: Present #012 has not been initialized!');
+										message.reply ('Table presentdata created.');
+									});
+								});
+
+								sql.get('SELECT * FROM presentdata WHERE number = 013').then(row => 
+								{
+									if (!row)
+									{
+										let pstring13 = ('ERROR: Present #013 has not been initialized!');
+									}
+									else
+									{
+										if (row.found)
+										{
+											let pstring13 = ('#0' + row.number + ': ' + row.name + ' (x' + amount13 + ')');
+										}
+										else
+										{
+											let pstring13 = ('#0' + row.number + ': ??? (x0)');
+										}
+									}
+								}).catch(err => 
+								{
+									console.error(err);
+									sql.run("CREATE TABLE IF NOT EXISTS presentdata (number INTEGER, name TEXT, desc TEXT, found BOOLEAN, like1 DOUBLE, like2 DOUBLE, like3 DOUBLE, like4 DOUBLE, like5 DOUBLE, like6 DOUBLE, like7 DOUBLE, like8 DOUBLE, like9 DOUBLE, like10 DOUBLE, like11 DOUBLE, like12 DOUBLE, like13 DOUBLE, like14 DOUBLE, like15 DOUBLE, like16 DOUBLE)").then(() => 
+									{
+										let pstring13 =  ('ERROR: Present #013 has not been initialized!');
+										message.reply ('Table presentdata created.');
+									});
+								});
+
+								sql.get('SELECT * FROM presentdata WHERE number = 014').then(row => 
+								{
+									if (!row)
+									{
+										let pstring14 = ('ERROR: Present #014 has not been initialized!');
+									}
+									else
+									{
+										if (row.found)
+										{
+											let pstring14 = ('#0' + row.number + ': ' + row.name + ' (x' + amount14 + ')');
+										}
+										else
+										{
+											let pstring14 = ('#0' + row.number + ': ??? (x0)');
+										}
+									}
+								}).catch(err => 
+								{
+									console.error(err);
+									sql.run("CREATE TABLE IF NOT EXISTS presentdata (number INTEGER, name TEXT, desc TEXT, found BOOLEAN, like1 DOUBLE, like2 DOUBLE, like3 DOUBLE, like4 DOUBLE, like5 DOUBLE, like6 DOUBLE, like7 DOUBLE, like8 DOUBLE, like9 DOUBLE, like10 DOUBLE, like11 DOUBLE, like12 DOUBLE, like13 DOUBLE, like14 DOUBLE, like15 DOUBLE, like16 DOUBLE)").then(() => 
+									{
+										let pstring14 =  ('ERROR: Present #014 has not been initialized!');
+										message.reply ('Table presentdata created.');
+									});
+								});
+
+								sql.get('SELECT * FROM presentdata WHERE number = 015').then(row => 
+								{
+									if (!row)
+									{
+										let pstring15 = ('ERROR: Present #015 has not been initialized!');
+									}
+									else
+									{
+										if (row.found)
+										{
+											let pstring15 = ('#0' + row.number + ': ' + row.name + ' (x' + amount15 + ')');
+										}
+										else
+										{
+											let pstring15 = ('#0' + row.number + ': ??? (x0)');
+										}
+									}
+								}).catch(err => 
+								{
+									console.error(err);
+									sql.run("CREATE TABLE IF NOT EXISTS presentdata (number INTEGER, name TEXT, desc TEXT, found BOOLEAN, like1 DOUBLE, like2 DOUBLE, like3 DOUBLE, like4 DOUBLE, like5 DOUBLE, like6 DOUBLE, like7 DOUBLE, like8 DOUBLE, like9 DOUBLE, like10 DOUBLE, like11 DOUBLE, like12 DOUBLE, like13 DOUBLE, like14 DOUBLE, like15 DOUBLE, like16 DOUBLE)").then(() => 
+									{
+										let pstring15 =  ('ERROR: Present #015 has not been initialized!');
+										message.reply ('Table presentdata created.');
+									});
+								});
+
+								sql.get('SELECT * FROM presentdata WHERE number = 016').then(row => 
+								{
+									if (!row)
+									{
+										let pstring16 = ('ERROR: Present #016 has not been initialized!');
+									}
+									else
+									{
+										if (row.found)
+										{
+											let pstring16 = ('#0' + row.number + ': ' + row.name + ' (x' + amount16 + ')');
+										}
+										else
+										{
+											let pstring16 = ('#0' + row.number + ': ??? (x0)');
+										}
+									}
+								}).catch(err => 
+								{
+									console.error(err);
+									sql.run("CREATE TABLE IF NOT EXISTS presentdata (number INTEGER, name TEXT, desc TEXT, found BOOLEAN, like1 DOUBLE, like2 DOUBLE, like3 DOUBLE, like4 DOUBLE, like5 DOUBLE, like6 DOUBLE, like7 DOUBLE, like8 DOUBLE, like9 DOUBLE, like10 DOUBLE, like11 DOUBLE, like12 DOUBLE, like13 DOUBLE, like14 DOUBLE, like15 DOUBLE, like16 DOUBLE)").then(() => 
+									{
+										let pstring16 =  ('ERROR: Present #016 has not been initialized!');
+										message.reply ('Table presentdata created.');
+									});
+								});
+
+								sql.get('SELECT * FROM presentdata WHERE number = 017').then(row => 
+								{
+									if (!row)
+									{
+										let pstring17 = ('ERROR: Present #017 has not been initialized!');
+									}
+									else
+									{
+										if (row.found)
+										{
+											let pstring17 = ('#0' + row.number + ': ' + row.name + ' (x' + amount17 + ')');
+										}
+										else
+										{
+											let pstring17 = ('#0' + row.number + ': ??? (x0)');
+										}
+									}
+								}).catch(err => 
+								{
+									console.error(err);
+									sql.run("CREATE TABLE IF NOT EXISTS presentdata (number INTEGER, name TEXT, desc TEXT, found BOOLEAN, like1 DOUBLE, like2 DOUBLE, like3 DOUBLE, like4 DOUBLE, like5 DOUBLE, like6 DOUBLE, like7 DOUBLE, like8 DOUBLE, like9 DOUBLE, like10 DOUBLE, like11 DOUBLE, like12 DOUBLE, like13 DOUBLE, like14 DOUBLE, like15 DOUBLE, like16 DOUBLE)").then(() => 
+									{
+										let pstring17 =  ('ERROR: Present #017 has not been initialized!');
+										message.reply ('Table presentdata created.');
+									});
+								});
+
+								sql.get('SELECT * FROM presentdata WHERE number = 018').then(row => 
+								{
+									if (!row)
+									{
+										let pstring18 = ('ERROR: Present #018 has not been initialized!');
+									}
+									else
+									{
+										if (row.found)
+										{
+											let pstring18 = ('#0' + row.number + ': ' + row.name + ' (x' + amount18 + ')');
+										}
+										else
+										{
+											let pstring18 = ('#0' + row.number + ': ??? (x0)');
+										}
+									}
+								}).catch(err => 
+								{
+									console.error(err);
+									sql.run("CREATE TABLE IF NOT EXISTS presentdata (number INTEGER, name TEXT, desc TEXT, found BOOLEAN, like1 DOUBLE, like2 DOUBLE, like3 DOUBLE, like4 DOUBLE, like5 DOUBLE, like6 DOUBLE, like7 DOUBLE, like8 DOUBLE, like9 DOUBLE, like10 DOUBLE, like11 DOUBLE, like12 DOUBLE, like13 DOUBLE, like14 DOUBLE, like15 DOUBLE, like16 DOUBLE)").then(() => 
+									{
+										let pstring18 =  ('ERROR: Present #018 has not been initialized!');
+										message.reply ('Table presentdata created.');
+									});
+								});
+
+								sql.get('SELECT * FROM presentdata WHERE number = 019').then(row => 
+								{
+									if (!row)
+									{
+										let pstring19 = ('ERROR: Present #019 has not been initialized!');
+									}
+									else
+									{
+										if (row.found)
+										{
+											let pstring19 = ('#0' + row.number + ': ' + row.name + ' (x' + amount19 + ')');
+										}
+										else
+										{
+											let pstring19 = ('#0' + row.number + ': ??? (x0)');
+										}
+									}
+								}).catch(err => 
+								{
+									console.error(err);
+									sql.run("CREATE TABLE IF NOT EXISTS presentdata (number INTEGER, name TEXT, desc TEXT, found BOOLEAN, like1 DOUBLE, like2 DOUBLE, like3 DOUBLE, like4 DOUBLE, like5 DOUBLE, like6 DOUBLE, like7 DOUBLE, like8 DOUBLE, like9 DOUBLE, like10 DOUBLE, like11 DOUBLE, like12 DOUBLE, like13 DOUBLE, like14 DOUBLE, like15 DOUBLE, like16 DOUBLE)").then(() => 
+									{
+										let pstring19 =  ('ERROR: Present #019 has not been initialized!');
+										message.reply ('Table presentdata created.');
+									});
+								});
+
+								sql.get('SELECT * FROM presentdata WHERE number = 020').then(row => 
+								{
+									if (!row)
+									{
+										let pstring20 = ('ERROR: Present #020 has not been initialized!');
+									}
+									else
+									{
+										if (row.found)
+										{
+											let pstring20 = ('#0' + row.number + ': ' + row.name + ' (x' + amount20 + ')');
+										}
+										else
+										{
+											let pstring20 = ('#0' + row.number + ': ??? (x0)');
+										}
+									}
+								}).catch(err => 
+								{
+									console.error(err);
+									sql.run("CREATE TABLE IF NOT EXISTS presentdata (number INTEGER, name TEXT, desc TEXT, found BOOLEAN, like1 DOUBLE, like2 DOUBLE, like3 DOUBLE, like4 DOUBLE, like5 DOUBLE, like6 DOUBLE, like7 DOUBLE, like8 DOUBLE, like9 DOUBLE, like10 DOUBLE, like11 DOUBLE, like12 DOUBLE, like13 DOUBLE, like14 DOUBLE, like15 DOUBLE, like16 DOUBLE)").then(() => 
+									{
+										let pstring20 =  ('ERROR: Present #020 has not been initialized!');
+										message.reply ('Table presentdata created.');
+									});
+								});
+
+								message.reply(pstring1 + '\n' + pstring2 + '\n' + pstring3 + '\n' + pstring4 + '\n' + pstring5 + '\n' + pstring6 + '\n' + pstring7 + '\n' + pstring8 + '\n' + pstring9 + '\n' + pstring10 + '\n' + pstring11 + '\n' + pstring12 + '\n' + pstring13 + '\n' + pstring14 + '\n' + pstring15 + '\n' + pstring16 + '\n' + pstring17 + '\n' + pstring18 + '\n' + pstring19 + '\n' + pstring20);
+								
+							break;
