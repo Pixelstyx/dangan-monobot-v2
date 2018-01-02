@@ -56,21 +56,7 @@ client.on('message', async message => {
 								var amount19 = row.p19;
 								var amount20 = row.p20;
 
-								let present1 = await sql.get('SELECT * FROM presentdata WHERE number = 001').then(row => 
-								{
-									if (!row)
-									{
-										message.reply('ERROR: Present #001 has not been initialized!');
-									}
-								}).catch(err => 
-								{
-									console.error(err);
-									sql.run("CREATE TABLE IF NOT EXISTS presentdata (number INTEGER, name TEXT, desc TEXT, found BOOLEAN, like1 DOUBLE, like2 DOUBLE, like3 DOUBLE, like4 DOUBLE, like5 DOUBLE, like6 DOUBLE, like7 DOUBLE, like8 DOUBLE, like9 DOUBLE, like10 DOUBLE, like11 DOUBLE, like12 DOUBLE, like13 DOUBLE, like14 DOUBLE, like15 DOUBLE, like16 DOUBLE)").then(() => 
-									{
-										message.reply('ERROR: Present #001 has not been initialized!');
-										message.reply('Table presentdata created.');
-									});
-								});
+								let present1 = await sql.get('SELECT * FROM presentdata WHERE number = 001');
 
 								if (present1.found)
 								{
@@ -81,21 +67,7 @@ client.on('message', async message => {
 									pstring1 = ('#00' + present1.number + ': ??? (x0)');
 								}
 
-								let present2 = await sql.get('SELECT * FROM presentdata WHERE number = 002').then(row => 
-								{
-									if (!row)
-									{
-										pstring2 = ('ERROR: Present #002 has not been initialized!');
-									}
-								}).catch(err => 
-								{
-									console.error(err);
-									sql.run("CREATE TABLE IF NOT EXISTS presentdata (number INTEGER, name TEXT, desc TEXT, found BOOLEAN, like1 DOUBLE, like2 DOUBLE, like3 DOUBLE, like4 DOUBLE, like5 DOUBLE, like6 DOUBLE, like7 DOUBLE, like8 DOUBLE, like9 DOUBLE, like10 DOUBLE, like11 DOUBLE, like12 DOUBLE, like13 DOUBLE, like14 DOUBLE, like15 DOUBLE, like16 DOUBLE)").then(() => 
-									{
-										message.reply('ERROR: Present #002 has not been initialized!');
-										message.reply('Table presentdata created.');
-									});
-								});
+								let present2 = await sql.get('SELECT * FROM presentdata WHERE number = 002');
 
 								if (present2.found)
 								{
@@ -106,21 +78,7 @@ client.on('message', async message => {
 									pstring2 = ('#00' + present2.number + ': ??? (x0)');
 								}
 
-								let present3 = await sql.get('SELECT * FROM presentdata WHERE number = 003').then(row => 
-								{
-									if (!row)
-									{
-										message.reply('ERROR: Present #003 has not been initialized!');
-									}
-								}).catch(err => 
-								{
-									console.error(err);
-									sql.run("CREATE TABLE IF NOT EXISTS presentdata (number INTEGER, name TEXT, desc TEXT, found BOOLEAN, like1 DOUBLE, like2 DOUBLE, like3 DOUBLE, like4 DOUBLE, like5 DOUBLE, like6 DOUBLE, like7 DOUBLE, like8 DOUBLE, like9 DOUBLE, like10 DOUBLE, like11 DOUBLE, like12 DOUBLE, like13 DOUBLE, like14 DOUBLE, like15 DOUBLE, like16 DOUBLE)").then(() => 
-									{
-										message.reply('ERROR: Present #003 has not been initialized!');
-										message.reply ('Table presentdata created.');
-									});
-								});
+								let present3 = await sql.get('SELECT * FROM presentdata WHERE number = 003');
 
 								if (present3.found)
 								{
@@ -131,21 +89,7 @@ client.on('message', async message => {
 									pstring3 = ('#00' + present3.number + ': ??? (x0)');
 								}
 
-								let present4 = await sql.get('SELECT * FROM presentdata WHERE number = 004').then(row => 
-								{
-									if (!row)
-									{
-										pstring4 = ('ERROR: Present #004 has not been initialized!');
-									}
-								}).catch(err => 
-								{
-									console.error(err);
-									sql.run("CREATE TABLE IF NOT EXISTS presentdata (number INTEGER, name TEXT, desc TEXT, found BOOLEAN, like1 DOUBLE, like2 DOUBLE, like3 DOUBLE, like4 DOUBLE, like5 DOUBLE, like6 DOUBLE, like7 DOUBLE, like8 DOUBLE, like9 DOUBLE, like10 DOUBLE, like11 DOUBLE, like12 DOUBLE, like13 DOUBLE, like14 DOUBLE, like15 DOUBLE, like16 DOUBLE)").then(() => 
-									{
-										message.reply('ERROR: Present #004 has not been initialized!');
-										message.reply ('Table presentdata created.');
-									});
-								});
+								let present4 = await sql.get('SELECT * FROM presentdata WHERE number = 004');
 
 								if (present4.found)
 								{
@@ -156,21 +100,7 @@ client.on('message', async message => {
 									pstring4 = ('#00' + present4.number + ': ??? (x0)');
 								}
 
-								let present5 = await sql.get('SELECT * FROM presentdata WHERE number = 005').then(row => 
-								{
-									if (!row)
-									{
-										message.reply('ERROR: Present #005 has not been initialized!');
-									}
-								}).catch(err => 
-								{
-									console.error(err);
-									sql.run("CREATE TABLE IF NOT EXISTS presentdata (number INTEGER, name TEXT, desc TEXT, found BOOLEAN, like1 DOUBLE, like2 DOUBLE, like3 DOUBLE, like4 DOUBLE, like5 DOUBLE, like6 DOUBLE, like7 DOUBLE, like8 DOUBLE, like9 DOUBLE, like10 DOUBLE, like11 DOUBLE, like12 DOUBLE, like13 DOUBLE, like14 DOUBLE, like15 DOUBLE, like16 DOUBLE)").then(() => 
-									{
-										message.reply('ERROR: Present #005 has not been initialized!');
-										message.reply ('Table presentdata created.');
-									});
-								});
+								let present5 = await sql.get('SELECT * FROM presentdata WHERE number = 005');
 
 								if (present5.found)
 								{
@@ -181,21 +111,7 @@ client.on('message', async message => {
 									pstring5 = ('#00' + present5.number + ': ??? (x0)');
 								}
 
-								let present6 = await sql.get('SELECT * FROM presentdata WHERE number = 006').then(row => 
-								{
-									if (!row)
-									{
-										message.reply('ERROR: Present #006 has not been initialized!');
-									}
-								}).catch(err => 
-								{
-									console.error(err);
-									sql.run("CREATE TABLE IF NOT EXISTS presentdata (number INTEGER, name TEXT, desc TEXT, found BOOLEAN, like1 DOUBLE, like2 DOUBLE, like3 DOUBLE, like4 DOUBLE, like5 DOUBLE, like6 DOUBLE, like7 DOUBLE, like8 DOUBLE, like9 DOUBLE, like10 DOUBLE, like11 DOUBLE, like12 DOUBLE, like13 DOUBLE, like14 DOUBLE, like15 DOUBLE, like16 DOUBLE)").then(() => 
-									{
-										message.reply('ERROR: Present #006 has not been initialized!');
-										message.reply ('Table presentdata created.');
-									});
-								});
+								let present6 = await sql.get('SELECT * FROM presentdata WHERE number = 006');
 
 								if (present6.found)
 								{
@@ -206,21 +122,7 @@ client.on('message', async message => {
 									pstring6 = ('#00' + present6.number + ': ??? (x0)');
 								}
 
-								let present7 = await sql.get('SELECT * FROM presentdata WHERE number = 007').then(row => 
-								{
-									if (!row)
-									{
-										message.reply('ERROR: Present #007 has not been initialized!');
-									}
-								}).catch(err => 
-								{
-									console.error(err);
-									sql.run("CREATE TABLE IF NOT EXISTS presentdata (number INTEGER, name TEXT, desc TEXT, found BOOLEAN, like1 DOUBLE, like2 DOUBLE, like3 DOUBLE, like4 DOUBLE, like5 DOUBLE, like6 DOUBLE, like7 DOUBLE, like8 DOUBLE, like9 DOUBLE, like10 DOUBLE, like11 DOUBLE, like12 DOUBLE, like13 DOUBLE, like14 DOUBLE, like15 DOUBLE, like16 DOUBLE)").then(() => 
-									{
-										message.reply('ERROR: Present #007 has not been initialized!');
-										message.reply ('Table presentdata created.');
-									});
-								});
+								let present7 = await sql.get('SELECT * FROM presentdata WHERE number = 007');
 
 								if (present7.found)
 								{
@@ -231,21 +133,7 @@ client.on('message', async message => {
 									pstring7 = ('#00' + present7.number + ': ??? (x0)');
 								}
 
-								let present8 = await sql.get('SELECT * FROM presentdata WHERE number = 008').then(row => 
-								{
-									if (!row)
-									{
-										message.reply('ERROR: Present #008 has not been initialized!');
-									}
-								}).catch(err => 
-								{
-									console.error(err);
-									sql.run("CREATE TABLE IF NOT EXISTS presentdata (number INTEGER, name TEXT, desc TEXT, found BOOLEAN, like1 DOUBLE, like2 DOUBLE, like3 DOUBLE, like4 DOUBLE, like5 DOUBLE, like6 DOUBLE, like7 DOUBLE, like8 DOUBLE, like9 DOUBLE, like10 DOUBLE, like11 DOUBLE, like12 DOUBLE, like13 DOUBLE, like14 DOUBLE, like15 DOUBLE, like16 DOUBLE)").then(() => 
-									{
-										message.reply('ERROR: Present #008 has not been initialized!');
-										message.reply ('Table presentdata created.');
-									});
-								});
+								let present8 = await sql.get('SELECT * FROM presentdata WHERE number = 008');
 
 								if (present8.found)
 								{
@@ -256,21 +144,7 @@ client.on('message', async message => {
 									pstring8 = ('#00' + present8.number + ': ??? (x0)');
 								}
 
-								let present9 = await sql.get('SELECT * FROM presentdata WHERE number = 009').then(row => 
-								{
-									if (!row)
-									{
-										message.reply('ERROR: Present #009 has not been initialized!');
-									}
-								}).catch(err => 
-								{
-									console.error(err);
-									sql.run("CREATE TABLE IF NOT EXISTS presentdata (number INTEGER, name TEXT, desc TEXT, found BOOLEAN, like1 DOUBLE, like2 DOUBLE, like3 DOUBLE, like4 DOUBLE, like5 DOUBLE, like6 DOUBLE, like7 DOUBLE, like8 DOUBLE, like9 DOUBLE, like10 DOUBLE, like11 DOUBLE, like12 DOUBLE, like13 DOUBLE, like14 DOUBLE, like15 DOUBLE, like16 DOUBLE)").then(() => 
-									{
-										message.reply('ERROR: Present #009 has not been initialized!');
-										message.reply ('Table presentdata created.');
-									});
-								});
+								let present9 = await sql.get('SELECT * FROM presentdata WHERE number = 009');
 
 								if (present9.found)
 								{
@@ -281,21 +155,7 @@ client.on('message', async message => {
 									pstring9 = ('#00' + present9.number + ': ??? (x0)');
 								}
 
-								let present10 = await sql.get('SELECT * FROM presentdata WHERE number = 010').then(row => 
-								{
-									if (!row)
-									{
-										message.reply('ERROR: Present #010 has not been initialized!');
-									}
-								}).catch(err => 
-								{
-									console.error(err);
-									sql.run("CREATE TABLE IF NOT EXISTS presentdata (number INTEGER, name TEXT, desc TEXT, found BOOLEAN, like1 DOUBLE, like2 DOUBLE, like3 DOUBLE, like4 DOUBLE, like5 DOUBLE, like6 DOUBLE, like7 DOUBLE, like8 DOUBLE, like9 DOUBLE, like10 DOUBLE, like11 DOUBLE, like12 DOUBLE, like13 DOUBLE, like14 DOUBLE, like15 DOUBLE, like16 DOUBLE)").then(() => 
-									{
-										message.reply('ERROR: Present #010 has not been initialized!');
-										message.reply ('Table presentdata created.');
-									});
-								});
+								let present10 = await sql.get('SELECT * FROM presentdata WHERE number = 010');
 
 								if (present10.found)
 								{
@@ -306,21 +166,7 @@ client.on('message', async message => {
 									pstring10 = ('#0' + present10.number + ': ??? (x0)');
 								}
 
-								let present11 = await sql.get('SELECT * FROM presentdata WHERE number = 011').then(row => 
-								{
-									if (!row)
-									{
-										message.reply('ERROR: Present #011 has not been initialized!');
-									}
-								}).catch(err => 
-								{
-									console.error(err);
-									sql.run("CREATE TABLE IF NOT EXISTS presentdata (number INTEGER, name TEXT, desc TEXT, found BOOLEAN, like1 DOUBLE, like2 DOUBLE, like3 DOUBLE, like4 DOUBLE, like5 DOUBLE, like6 DOUBLE, like7 DOUBLE, like8 DOUBLE, like9 DOUBLE, like10 DOUBLE, like11 DOUBLE, like12 DOUBLE, like13 DOUBLE, like14 DOUBLE, like15 DOUBLE, like16 DOUBLE)").then(() => 
-									{
-										message.reply('ERROR: Present #011 has not been initialized!');
-										message.reply ('Table presentdata created.');
-									});
-								});
+								let present11 = await sql.get('SELECT * FROM presentdata WHERE number = 011');
 
 								if (present11.found)
 								{
@@ -331,21 +177,7 @@ client.on('message', async message => {
 									pstring11 = ('#0' + present11.number + ': ??? (x0)');
 								}
 
-								let present12 = await sql.get('SELECT * FROM presentdata WHERE number = 012').then(row => 
-								{
-									if (!row)
-									{
-										message.reply('ERROR: Present #012 has not been initialized!');
-									}
-								}).catch(err => 
-								{
-									console.error(err);
-									sql.run("CREATE TABLE IF NOT EXISTS presentdata (number INTEGER, name TEXT, desc TEXT, found BOOLEAN, like1 DOUBLE, like2 DOUBLE, like3 DOUBLE, like4 DOUBLE, like5 DOUBLE, like6 DOUBLE, like7 DOUBLE, like8 DOUBLE, like9 DOUBLE, like10 DOUBLE, like11 DOUBLE, like12 DOUBLE, like13 DOUBLE, like14 DOUBLE, like15 DOUBLE, like16 DOUBLE)").then(() => 
-									{
-										message.reply('ERROR: Present #012 has not been initialized!');
-										message.reply ('Table presentdata created.');
-									});
-								});
+								let present12 = await sql.get('SELECT * FROM presentdata WHERE number = 012');
 
 								if (present12.found)
 								{
@@ -356,21 +188,7 @@ client.on('message', async message => {
 									pstring12 = ('#0' + present12.number + ': ??? (x0)');
 								}
 
-								let present13 = await sql.get('SELECT * FROM presentdata WHERE number = 013').then(row => 
-								{
-									if (!row)
-									{
-										message.reply('ERROR: Present #013 has not been initialized!');
-									}
-								}).catch(err => 
-								{
-									console.error(err);
-									sql.run("CREATE TABLE IF NOT EXISTS presentdata (number INTEGER, name TEXT, desc TEXT, found BOOLEAN, like1 DOUBLE, like2 DOUBLE, like3 DOUBLE, like4 DOUBLE, like5 DOUBLE, like6 DOUBLE, like7 DOUBLE, like8 DOUBLE, like9 DOUBLE, like10 DOUBLE, like11 DOUBLE, like12 DOUBLE, like13 DOUBLE, like14 DOUBLE, like15 DOUBLE, like16 DOUBLE)").then(() => 
-									{
-										message.reply('ERROR: Present #013 has not been initialized!');
-										message.reply ('Table presentdata created.');
-									});
-								});
+								let present13 = await sql.get('SELECT * FROM presentdata WHERE number = 013');
 
 								if (present13.found)
 								{
@@ -381,21 +199,7 @@ client.on('message', async message => {
 									pstring13 = ('#0' + present13.number + ': ??? (x0)');
 								}
 
-								let present14 = await sql.get('SELECT * FROM presentdata WHERE number = 014').then(row => 
-								{
-									if (!row)
-									{
-										message.reply('ERROR: Present #014 has not been initialized!');
-									}
-								}).catch(err => 
-								{
-									console.error(err);
-									sql.run("CREATE TABLE IF NOT EXISTS presentdata (number INTEGER, name TEXT, desc TEXT, found BOOLEAN, like1 DOUBLE, like2 DOUBLE, like3 DOUBLE, like4 DOUBLE, like5 DOUBLE, like6 DOUBLE, like7 DOUBLE, like8 DOUBLE, like9 DOUBLE, like10 DOUBLE, like11 DOUBLE, like12 DOUBLE, like13 DOUBLE, like14 DOUBLE, like15 DOUBLE, like16 DOUBLE)").then(() => 
-									{
-										message.reply('ERROR: Present #014 has not been initialized!');
-										message.reply('Table presentdata created.');
-									});
-								});
+								let present14 = await sql.get('SELECT * FROM presentdata WHERE number = 014');
 
 								if (present14.found)
 								{
@@ -406,21 +210,7 @@ client.on('message', async message => {
 									pstring14 = ('#0' + present14.number + ': ??? (x0)');
 								}
 
-								let present15 = await sql.get('SELECT * FROM presentdata WHERE number = 015').then(row => 
-								{
-									if (!row)
-									{
-										message.reply('ERROR: Present #015 has not been initialized!');
-									}
-								}).catch(err => 
-								{
-									console.error(err);
-									sql.run("CREATE TABLE IF NOT EXISTS presentdata (number INTEGER, name TEXT, desc TEXT, found BOOLEAN, like1 DOUBLE, like2 DOUBLE, like3 DOUBLE, like4 DOUBLE, like5 DOUBLE, like6 DOUBLE, like7 DOUBLE, like8 DOUBLE, like9 DOUBLE, like10 DOUBLE, like11 DOUBLE, like12 DOUBLE, like13 DOUBLE, like14 DOUBLE, like15 DOUBLE, like16 DOUBLE)").then(() => 
-									{
-										message.reply('ERROR: Present #015 has not been initialized!');
-										message.reply ('Table presentdata created.');
-									});
-								});
+								let present15 = await sql.get('SELECT * FROM presentdata WHERE number = 015');
 
 								if (present15.found)
 								{
@@ -431,21 +221,7 @@ client.on('message', async message => {
 									pstring15 = ('#0' + present15.number + ': ??? (x0)');
 								}
 
-								let present16 = await sql.get('SELECT * FROM presentdata WHERE number = 016').then(row => 
-								{
-									if (!row)
-									{
-										message.reply('ERROR: Present #016 has not been initialized!');
-									}
-								}).catch(err => 
-								{
-									console.error(err);
-									sql.run("CREATE TABLE IF NOT EXISTS presentdata (number INTEGER, name TEXT, desc TEXT, found BOOLEAN, like1 DOUBLE, like2 DOUBLE, like3 DOUBLE, like4 DOUBLE, like5 DOUBLE, like6 DOUBLE, like7 DOUBLE, like8 DOUBLE, like9 DOUBLE, like10 DOUBLE, like11 DOUBLE, like12 DOUBLE, like13 DOUBLE, like14 DOUBLE, like15 DOUBLE, like16 DOUBLE)").then(() => 
-									{
-										message.reply('ERROR: Present #016 has not been initialized!');
-										message.reply ('Table presentdata created.');
-									});
-								});
+								let present16 = await sql.get('SELECT * FROM presentdata WHERE number = 016');
 
 								if (present16.found)
 								{
@@ -456,21 +232,7 @@ client.on('message', async message => {
 									pstring16 = ('#0' + present16.number + ': ??? (x0)');
 								}
 
-								let present17 = await sql.get('SELECT * FROM presentdata WHERE number = 017').then(row => 
-								{
-									if (!row)
-									{
-										message.reply('ERROR: Present #017 has not been initialized!');
-									}
-								}).catch(err => 
-								{
-									console.error(err);
-									sql.run("CREATE TABLE IF NOT EXISTS presentdata (number INTEGER, name TEXT, desc TEXT, found BOOLEAN, like1 DOUBLE, like2 DOUBLE, like3 DOUBLE, like4 DOUBLE, like5 DOUBLE, like6 DOUBLE, like7 DOUBLE, like8 DOUBLE, like9 DOUBLE, like10 DOUBLE, like11 DOUBLE, like12 DOUBLE, like13 DOUBLE, like14 DOUBLE, like15 DOUBLE, like16 DOUBLE)").then(() => 
-									{
-										message.reply('ERROR: Present #017 has not been initialized!');
-										message.reply ('Table presentdata created.');
-									});
-								});
+								let present17 = await sql.get('SELECT * FROM presentdata WHERE number = 017');
 
 								if (present17.found)
 								{
@@ -481,21 +243,7 @@ client.on('message', async message => {
 									pstring17 = ('#0' + present17.number + ': ??? (x0)');
 								}
 
-								let present18 = await sql.get('SELECT * FROM presentdata WHERE number = 018').then(row => 
-								{
-									if (!row)
-									{
-										message.reply('ERROR: Present #018 has not been initialized!');
-									}
-								}).catch(err => 
-								{
-									console.error(err);
-									sql.run("CREATE TABLE IF NOT EXISTS presentdata (number INTEGER, name TEXT, desc TEXT, found BOOLEAN, like1 DOUBLE, like2 DOUBLE, like3 DOUBLE, like4 DOUBLE, like5 DOUBLE, like6 DOUBLE, like7 DOUBLE, like8 DOUBLE, like9 DOUBLE, like10 DOUBLE, like11 DOUBLE, like12 DOUBLE, like13 DOUBLE, like14 DOUBLE, like15 DOUBLE, like16 DOUBLE)").then(() => 
-									{
-										message.reply('ERROR: Present #018 has not been initialized!');
-										message.reply('Table presentdata created.');
-									});
-								});
+								let present18 = await sql.get('SELECT * FROM presentdata WHERE number = 018');
 
 								if (present18.found)
 								{
@@ -506,21 +254,7 @@ client.on('message', async message => {
 									pstring18 = ('#0' + present18.number + ': ??? (x0)');
 								}
 
-								let present19 = await sql.get('SELECT * FROM presentdata WHERE number = 019').then(row => 
-								{
-									if (!row)
-									{
-										message.reply('ERROR: Present #019 has not been initialized!');
-									}
-								}).catch(err => 
-								{
-									console.error(err);
-									sql.run("CREATE TABLE IF NOT EXISTS presentdata (number INTEGER, name TEXT, desc TEXT, found BOOLEAN, like1 DOUBLE, like2 DOUBLE, like3 DOUBLE, like4 DOUBLE, like5 DOUBLE, like6 DOUBLE, like7 DOUBLE, like8 DOUBLE, like9 DOUBLE, like10 DOUBLE, like11 DOUBLE, like12 DOUBLE, like13 DOUBLE, like14 DOUBLE, like15 DOUBLE, like16 DOUBLE)").then(() => 
-									{
-										message.reply('ERROR: Present #019 has not been initialized!');
-										message.reply ('Table presentdata created.');
-									});
-								});
+								let present19 = await sql.get('SELECT * FROM presentdata WHERE number = 019');
 
 								if (present19.found)
 								{
@@ -531,21 +265,7 @@ client.on('message', async message => {
 									pstring19 = ('#0' + present19.number + ': ??? (x0)');
 								}
 
-								let present20 = await sql.get('SELECT * FROM presentdata WHERE number = 020').then(row => 
-								{
-									if (!row)
-									{
-										message.reply('ERROR: Present #020 has not been initialized!');
-									}
-								}).catch(err => 
-								{
-									console.error(err);
-									sql.run("CREATE TABLE IF NOT EXISTS presentdata (number INTEGER, name TEXT, desc TEXT, found BOOLEAN, like1 DOUBLE, like2 DOUBLE, like3 DOUBLE, like4 DOUBLE, like5 DOUBLE, like6 DOUBLE, like7 DOUBLE, like8 DOUBLE, like9 DOUBLE, like10 DOUBLE, like11 DOUBLE, like12 DOUBLE, like13 DOUBLE, like14 DOUBLE, like15 DOUBLE, like16 DOUBLE)").then(() => 
-									{
-										message.reply('ERROR: Present #020 has not been initialized!');
-										message.reply ('Table presentdata created.');
-									});
-								});
+								let present20 = await sql.get('SELECT * FROM presentdata WHERE number = 020');
 
 								if (present20.found)
 								{
